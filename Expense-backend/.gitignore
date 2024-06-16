@@ -1,0 +1,38 @@
+# Ignore Node modules
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore log files
+logs/
+*.log
+
+# Ignore dependency directories
+pids/
+.cache/
+dist/
+node_modules/
+bower_components/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore compiled binary addons (node-gyp)
+/build/
+
+# Ignore optional npm cache directory
+.npm
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore Mac files
+*.DS_Store
