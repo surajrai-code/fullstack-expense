@@ -9,7 +9,7 @@ const ForgotPasswordForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:8080/auth/forget-password', { email });
+      await axios.post('https://fullstack-expense-backend.onrender.com/auth/forget-password', { email });
       setMessage('Password reset email sent. Check your inbox.');
     } catch (error) {
       console.error('Error:', error.response.data.error);

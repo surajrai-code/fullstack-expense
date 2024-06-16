@@ -12,7 +12,7 @@ const ResetPasswordForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post(`http://localhost:8080/auth/reset-password/${token}`, { token, password });
+      await axios.post(`https://fullstack-expense-backend.onrender.com/auth/reset-password/${token}`, { token, password });
       setMessage('Password reset successfully.');
     } catch (error) {
       console.error('Error:', error.response.data.error);

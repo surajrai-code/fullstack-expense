@@ -13,7 +13,7 @@ const ExpenseList = ({ onEdit }) => {
   const fetchExpenses = async () => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.get(`http://localhost:8080/expenses/get?page=${currentPage}`, {
+      const response = await axios.get(`https://fullstack-expense-backend.onrender.com/expenses/get?page=${currentPage}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setExpenses(response.data.expenses);
@@ -26,7 +26,7 @@ const ExpenseList = ({ onEdit }) => {
   const handleDelete = async (id) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:8080/expenses/delete/${id}`, {
+      await axios.delete(`https://fullstack-expense-backend.onrender.com/expenses/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchExpenses();

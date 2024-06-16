@@ -38,7 +38,7 @@ const LoginAndSignup = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/auth/login', {
+      const response = await axios.post('https://fullstack-expense-backend.onrender.com/auth/login', {
         email: formData.email,
         password: formData.password
       });
@@ -57,7 +57,7 @@ const LoginAndSignup = () => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:8080/auth/signup', {
+      const response = await axios.post('https://fullstack-expense-backend.onrender.com/auth/signup', {
         username: formData.username,
         email: formData.email,
         password: formData.password

@@ -23,7 +23,7 @@ const ExpenseForm = ({ expenseToEdit, onSave }) => {
     const token = localStorage.getItem('token');
     if (expenseToEdit) {
       try {
-        const response = await axios.put(`http://localhost:8080/expenses/edit/${expenseToEdit._id}`, formData, {
+        const response = await axios.put(`https://fullstack-expense-backend.onrender.com/expenses/edit/${expenseToEdit._id}`, formData, {
           headers: { Authorization: `Bearer ${token}` }
         });
         onSave();
@@ -33,7 +33,7 @@ const ExpenseForm = ({ expenseToEdit, onSave }) => {
       }
     } else {
       try {
-        const response = await axios.post('http://localhost:8080/expenses/create', formData, {
+        const response = await axios.post('https://fullstack-expense-backend.onrender.com/expenses/create', formData, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setFormData({ name: '', category: '', amount: '' });

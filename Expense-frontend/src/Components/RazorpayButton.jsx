@@ -29,7 +29,7 @@ const RazorpayButton = ({ order }) => {
 
               try {
                 const verifyResponse = await axios.post(
-                  'http://localhost:8080/payment/verify-payment',
+                  'https://fullstack-expense-backend.onrender.com/payment/verify-payment',
                   {
                     razorpay_order_id: response.razorpay_order_id,
                     razorpay_payment_id: response.razorpay_payment_id,

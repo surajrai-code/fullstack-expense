@@ -5,7 +5,7 @@ const ExpensesDownload = () => {
   const handleDownloadClick = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:8080/expenses/download', {
+      const response = await axios.get('https://fullstack-expense-backend.onrender.com/expenses/download', {
         responseType: 'blob',
         headers: {
           'Authorization': `Bearer ${token}`

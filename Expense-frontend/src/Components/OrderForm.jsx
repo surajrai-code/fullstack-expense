@@ -9,7 +9,7 @@ const OrderForm = ({ onOrderCreated }) => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:8080/payment/create-order",
+        "https://fullstack-expense-backend.onrender.com/payment/create-order",
         {},
         {
           headers: {
